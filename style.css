@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* --background-color: teal;
+  --primary-color: goldenrod; */
+}
+
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: serif;
+  background: linear-gradient(to right, rgb(15, 12, 41), rgb(48, 43, 99), rgb(36, 36, 62));
+  font-family: sans-serif;
+}
+
+.btn {
+  text-decoration: none;
+  color: transparent;
+  font-size: 20px;
+  padding: 20px 80px;
+  position: relative;
+}
+
+.btn::before {
+  content: "@truptishu";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #20bf55;
+  background-image: linear-gradient(-315deg, #20bf55 0%, #01baef 74%);
+  box-shadow: 0px 0px 10px #20bf55, 0px 0px 15px #01baef;
+  border: 1px solid #20bf55;
+  transform-origin: left center;
+  transition: all 0.8s;
+  z-index: -1;
+  letter-spacing: 5px;
+}
+
+.btn__nail {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  width: 12px;
+  height: 12px;
+  font-size: 12px;
+  color: rgb(128, 128, 128);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+  border-radius: 50%;
+  transform-origin: 50% 50%;
+  transform: translateY(-50%);
+  transition: all 0.8s;
+}
+
+.btn:hover .btn__nail {
+  transform: translateY(-50%) rotate(-360deg);
+}
+
+.btn:hover::before {
+  transform: rotate(-360deg) translateX(40px);
+  z-index: -10;
+}
+
+.btn__social-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-origin: 15px 50%;
+  transition: all 0.6s;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.btn__social-bar:nth-of-type(1) {
+  background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+  z-index: -2;
+}
+
+.btn__social-bar:nth-of-type(2) {
+  font-size: 40px;
+  background: rgb(59, 89, 152);
+  background: linear-gradient(90deg, rgba(59, 89, 152, 1) 0%, rgba(43, 65, 112, 1) 100%);
+  z-index: -3;
+}
+
+.btn__social-bar:nth-of-type(3) {
+  background: rgb(0, 172, 237);
+  background: linear-gradient(90deg, rgba(0, 172, 237, 1) 0%, rgba(0, 129, 206, 1) 100%);
+  z-index: -4;
+}
+
+.btn__social-bar:nth-of-type(4) {
+  background: rgb(230, 69, 34);
+  background: linear-gradient(90deg, rgba(230, 69, 34, 1) 0%, rgba(195, 50, 25, 1) 100%);
+  z-index: -5;
+}
+
+.btn:hover .btn__social-bar:nth-of-type(1) {
+  transform: rotate(-420deg);
+  transition-delay: 0.2s;
+}
+
+.btn:hover .btn__social-bar:nth-of-type(2) {
+  transform: rotate(-390deg);
+  transition-delay: 0.25s;
+
+}
+
+.btn:hover .btn__social-bar:nth-of-type(3) {
+  transform: rotate(-330deg);
+  transition-delay: 0.3s;
+
+}
+
+.btn:hover .btn__social-bar:nth-of-type(4) {
+  transform: rotate(-300deg);
+  transition-delay: 0.35s;
+}
+
+.btn:hover .btn__social-bar i {
+  animation: glow 1s linear infinite alternate 0.8s;
+}
+
+
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 0px rgba(255, 255, 255, 0.733)
+  }
+
+  100% {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.733);
+  }
+}
